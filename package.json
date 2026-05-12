@@ -1,0 +1,84 @@
+{
+  "name": "word-counter-pro-ai",
+  "displayName": "Word Counter Pro AI",
+  "description": "A production-quality VS Code extension that tracks accurate word count, character count, lines, and calculates reading time with real-time status bar updates and analytics.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "publisher": "your-publisher-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/word-counter-pro-ai.git"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "wordCounter.countWords",
+        "title": "Word Counter: Count Words"
+      },
+      {
+        "command": "wordCounter.showAnalytics",
+        "title": "Word Counter: Show Analytics"
+      },
+      {
+        "command": "wordCounter.toggleLiveCounter",
+        "title": "Word Counter: Toggle Live Counter"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "wordCounter.showAnalytics",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Word Counter Pro",
+      "properties": {
+        "wordCounter.enableLiveCount": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable live word count updates while typing."
+        },
+        "wordCounter.readingSpeed": {
+          "type": "number",
+          "default": 200,
+          "description": "Average reading speed in words per minute."
+        },
+        "wordCounter.showStatusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show or hide the word counter in the status bar."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
