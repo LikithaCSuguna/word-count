@@ -1,69 +1,247 @@
 # Word Counter Pro AI
 
-A production-quality VS Code extension that tracks accurate word count, character count, lines, and calculates reading time with real-time status bar updates and analytics.
+A production-quality VS Code extension that provides accurate word count, character count, line count, and estimated reading time with real-time status bar updates and detailed analytics.
+
+![VS Code](https://img.shields.io/badge/VS%20Code-Extension-blue)
+![TypeScript](https://img.shields.io/badge/Built%20With-TypeScript-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## Features
+##  Features
 
-- **Word Count**: Accurately counts words in your active document.
-- **Character Count**: Tracks total characters and characters without spaces.
-- **Line Count**: Provides the total number of lines.
-- **Reading Time**: Estimates how long it will take to read the document.
-- **Live Status Bar**: Real-time updates as you type.
-- **Analytics Panel**: A beautiful webview panel displaying detailed statistics.
+- Accurate Word Count
+- Character Count
+- Character Count Without Spaces
+- Total Line Count
+- Estimated Reading Time
+- Real-Time Status Bar Updates
+- Interactive Analytics Dashboard
+- Lightweight and Fast
+- Clean UI Experience
 
-## Installation
+---
 
-1. Open VS Code
-2. Go to the Extensions view (\`Ctrl+Shift+X\` / \`Cmd+Shift+X\`)
-3. Search for "Word Counter Pro AI"
-4. Click Install
+## 📦 Installation
+
+### Install from VS Code Marketplace
+
+1. Open **VS Code**
+2. Open Extensions Panel
+
+```bash
+Ctrl + Shift + X
+```
+
+Mac:
+
+```bash
+Cmd + Shift + X
+```
+
+3. Search:
+
+```bash
+Word Counter Pro AI
+```
+
+4. Click **Install**
+
+---
 
 ## Usage
 
-The extension automatically activates when you open a text file. You will see a live update of the word count in the bottom left status bar.
+The extension automatically activates when you open a text file.
 
-### Commands
+You will see a live word counter in the bottom-left status bar.
 
-Open the Command Palette (\`Ctrl+Shift+P\` / \`Cmd+Shift+P\`) and type "Word Counter":
-- \`Word Counter: Show Analytics\`: Opens the detailed analytics webview panel.
-- \`Word Counter: Count Words\`: Displays a quick popup with the current word count.
-- \`Word Counter: Toggle Live Counter\`: Enables or disables real-time counting while typing.
+---
 
-### Keyboard Shortcuts
+## 🛠 Commands
 
-- \`Ctrl+Shift+A\` (Windows/Linux) or \`Cmd+Shift+A\` (Mac): Show Analytics Panel
+Open Command Palette:
 
-## Settings
+```bash
+Ctrl + Shift + P
+```
 
-You can customize the extension behavior through VS Code settings (\`Ctrl+,\` / \`Cmd+,\`):
+Mac:
 
-- \`wordCounter.enableLiveCount\`: Enable or disable live updates (default: \`true\`)
-- \`wordCounter.readingSpeed\`: Adjust the words-per-minute used for reading time calculation (default: \`200\`)
-- \`wordCounter.showStatusBar\`: Show or hide the status bar item (default: \`true\`)
+```bash
+Cmd + Shift + P
+```
 
-## Development Setup
+Search for:
 
-1. Clone the repository: \`git clone https://github.com/yourusername/word-counter-pro-ai.git\`
-2. Run \`npm install\`
-3. Press \`F5\` in VS Code to launch the Extension Development Host
+| Command | Description |
+|---|---|
+| `Word Counter: Show Analytics` | Opens analytics dashboard |
+| `Word Counter: Count Words` | Shows quick word count popup |
+| `Word Counter: Toggle Live Counter` | Enable/Disable live counting |
 
-### Debugging
+---
 
-- Use \`F5\` to start debugging. This opens a new VS Code window (Extension Development Host).
-- Set breakpoints in \`src/extension.ts\` or other files.
-- View logs in the Debug Console.
+## ⌨ Keyboard Shortcuts
 
-## Publishing to Marketplace
+| Shortcut | Action |
+|---|---|
+| `Ctrl + Shift + A` | Open Analytics Panel (Windows/Linux) |
+| `Cmd + Shift + A` | Open Analytics Panel (Mac) |
 
-1. Create a Personal Access Token (PAT) in Azure DevOps.
-2. Install \`vsce\`: \`npm install -g @vscode/vsce\`
-3. Create a publisher: \`vsce create-publisher <publisher-name>\`
-4. Login: \`vsce login <publisher-name>\`
-5. Package the extension (optional): \`vsce package\`
-6. Publish: \`vsce publish\`
+---
+
+## ⚙️ Settings
+
+Customize extension settings from:
+
+```bash
+Ctrl + ,
+```
+
+Mac:
+
+```bash
+Cmd + ,
+```
+
+### Available Settings
+
+| Setting | Description | Default |
+|---|---|---|
+| `wordCounter.enableLiveCount` | Enable or disable live counting | `true` |
+| `wordCounter.readingSpeed` | Words per minute for reading time | `200` |
+| `wordCounter.showStatusBar` | Show or hide status bar item | `true` |
+
+---
+
+## 📊 Analytics Dashboard
+
+The analytics dashboard provides:
+
+- Total Words
+- Total Characters
+- Characters Without Spaces
+- Total Lines
+- Estimated Reading Time
+
+---
+
+## 🧑‍💻 Built With
+
+- TypeScript
+- VS Code Extension API
+- Node.js
+- Webview API
+
+---
+
+## 📁 Project Structure
+
+```bash
+word-count/
+│
+├── src/
+├── .github/
+├── package.json
+├── tsconfig.json
+├── README.md
+└── CHANGELOG.md
+```
+
+---
+
+## 🔧 Development Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/dayananda-ks/word-count.git
+```
+
+### Open Project
+
+```bash
+cd word-count
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Extension
+
+Press:
+
+```bash
+F5
+```
+
+This launches the **Extension Development Host**.
+
+---
+
+##  Debugging
+
+- Press `F5` to start debugging
+- Set breakpoints inside:
+
+```bash
+src/extension.ts
+```
+
+- View logs in the **Debug Console**
+
+---
+
+##  Publishing to VS Code Marketplace
+
+### Install VSCE
+
+```bash
+npm install -g @vscode/vsce
+```
+
+### Create Publisher
+
+```bash
+vsce create-publisher dayananda-ks
+```
+
+### Login
+
+```bash
+vsce login dayananda-ks
+```
+
+### Package Extension
+
+```bash
+vsce package
+```
+
+### Publish Extension
+
+```bash
+vsce publish
+```
+
+
+## 🤝 Contributing
+
+Pull requests are welcome.
+
+For major changes, please open an issue first to discuss what you would like to improve.
+
+---
 
 ## License
 
 MIT License
+
+---
+
+## 👨‍💻 Author
+
+Developed by [dayananda-ks](https://github.com/dayananda-ks)
