@@ -12,7 +12,7 @@
   "publisher": "DayanandaKS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/word-counter-pro-ai.git"
+    "url": "https://github.com/dayananda-ks/word-counter-pro-ai.git"
   },
   "activationEvents": [
     "onStartupFinished"
