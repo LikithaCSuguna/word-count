@@ -155,7 +155,7 @@ word-count/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/dayananda-ks/word-count.git
+git clone https://github.com/dayananda-ks/word-count.git 
 ```
 
 ### Open Project
